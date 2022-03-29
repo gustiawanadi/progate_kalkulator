@@ -63,22 +63,16 @@ equalSign.addEventListener('click',()=> {
 
 const calculate= () => {
     let result = ''
-    switch (calculationOperator) {
-        case '+':
-            result = parseFloat(prevNumber) + parseFloat(currentNumber)
-            break;
-        case '-':
-            result = parseFloat(prevNumber) - parseFloat(currentNumber)
-            break;
-        case '*':
-            result = parseFloat(prevNumber) * parseFloat(currentNumber)
-            break;
-        case '/':
-            result = parseFloat(prevNumber) / parseFloat(currentNumber)
-            break;
-    
-        default:
-            return;
+    if (calculationOperator === "+") {
+        result = parseFloat(prevNumber) + parseFloat(currentNumber)
+        // result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
+    } else  if (calculationOperator === "-"){
+        // result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber)
+        result = parseFloat(prevNumber) - parseFloat(currentNumber)
+    } else  if (calculationOperator === "*"){
+        result = parseFloat(prevNumber) * parseFloat(currentNumber)
+    } else {
+        result = parseFloat(prevNumber) / parseFloat(currentNumber)
     }
     currentNumber = result
     calculationOperator = ''
