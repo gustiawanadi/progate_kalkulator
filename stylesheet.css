@@ -39,10 +39,7 @@ button{
 button:hover{
     background-color: darkgray;
 }
-
-.all-clear, .zero-btn{
-    width:50%;
-}
+h
 .operator, .equal-sign{
     background-color: orange;
 }
