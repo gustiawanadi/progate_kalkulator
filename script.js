@@ -65,14 +65,20 @@ const calculate= () => {
     let result = ''
     if (calculationOperator === "+") {
         result = parseFloat(prevNumber) + parseFloat(currentNumber)
-        // result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
     } else  if (calculationOperator === "-"){
-        // result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber)
         result = parseFloat(prevNumber) - parseFloat(currentNumber)
     } else  if (calculationOperator === "*"){
         result = parseFloat(prevNumber) * parseFloat(currentNumber)
-    } else {
+    } else if (calculationOperator === "/"){
         result = parseFloat(prevNumber) / parseFloat(currentNumber)
+    } else if (calculationOperator === "%"){
+        result = parseFloat(prevNumber) % parseFloat(currentNumber)
+    } else if (calculationOperator === "x²"){
+        result = parseFloat(prevNumber) * parseFloat(prevNumber)
+    } else if (calculationOperator === "√"){
+        result = Math.sqrt(parseFloat(prevNumber))
+    } else {
+        result = alert('anda menekan operator yang salah!')
     }
     currentNumber = result
     calculationOperator = ''
@@ -107,6 +113,3 @@ inputDecimal = (dot) => {
     }
     currentNumber += dot
 }
-
-
-
